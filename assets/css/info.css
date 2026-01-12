@@ -1,0 +1,187 @@
+.Info-container {
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+}
+
+.Info-container .application-info {
+	width: 100%;
+	background: #206080;
+	display: flex;
+	height:auto;
+	border-radius: 10px;
+	padding:5px;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0px 0px 5px 2px #206090;
+	animation: AppInfoAnimation 2s infinite;
+
+}
+
+@keyframes AppInfoAnimation {
+	50%{
+
+		transform: translateY(10px);
+	}
+}
+
+.application-info .head {
+	font-size:18px;
+	font-weight: 700;
+	padding:5px;
+
+}
+
+.application-info .info {
+/*	background: #252525;*/
+	padding:5px;
+	text-orientation: upright;
+	text-justify: revert-layer;
+	border-radius: 10px;
+}
+
+
+.contact-us {
+	width: 100%;
+	height:auto;
+	background: #206080;
+	margin-top:20px;
+	border-radius: 10px;
+	padding:5px;
+}
+
+.contact-us .head {
+	padding:10px;
+	font-size:18px;
+}
+.contact-us .item {
+	width: 100%;
+	height:55px;
+	background: #252525;
+	display: grid;
+	grid-template-columns: .1fr 1fr;
+	grid-column-gap: 10px;
+	align-items: center;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	border-bottom:1px solid #404040;
+}
+
+.contact-us .item img {
+	width:38px;
+}
+
+.contact-us .item.top {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.contact-us .item.bottom {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.contact-us .item .degre {
+	font-size:12px;
+	color:gray;
+}
+
+.App-Content {
+	width: 100%;
+	height:200px;
+	margin-bottom: 10px;
+	display: grid;
+	grid-template-columns:.8fr 1.2fr;
+	justify-items: center;
+	align-items: center;
+}
+
+.App-Content .logo {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+}
+
+.App-Content .logo .brand {
+	width: 140px;
+	height: 140px;
+	background: #206080;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow:0px 0px 5px 5px  #206080;
+}
+
+.App-Content .logo .brand img {
+	width: 50%;
+	animation: AppIconAnimation 2s infinite;
+}
+
+
+@keyframes  AppIconAnimation {
+	50%{
+		transform: scale(1.2);
+	}
+}
+
+.App-Content .info {
+	width: 100%;
+	height: auto;
+	padding: 10px;
+	background: #303030;
+	border-radius: 10px;
+}
+
+.App-Content .info .info-box {
+	display:grid;
+	grid-template-columns: 1fr;
+	gap:10px;
+}
+
+.App-Content .info .info-box .infoItem {
+	width: 100%;
+	height:auto;
+	padding: 5px;
+	background: #202020;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-left:5px;
+	border-radius: 5px;
+}
+
+.App-Content .info .info-box .infoItem .value {
+	color:#107090;
+	margin-left: 10px;
+}
+
+@media screen and (max-width: 592px) {
+	.Info-container {
+		padding: 10px;
+		height: auto;
+	}
+}
+
+
+@media screen and (max-width: 792px) {
+	.App-Content {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.App-Content .logo .brand {
+		width: 100px;
+		height: 100px;
+	}
+
+	.App-Content .info .info-box {
+		font-size:14px
+	}
+
+	.application-info {
+		margin-top:20px;
+	}
+}
